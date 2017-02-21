@@ -1,0 +1,122 @@
+body {
+	background-color: black;
+	min-width: 100%;
+	min-height: 100%;
+	background: url(../Images/homepageMinimal.jpg)no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.monthly-day-title-wrap div {
+	font-weight: bolder;
+}
+
+.monthly-day-total {
+	font-style: italic;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	margin-right: .5em;
+}
+
+.monthly-day-total-positive {
+	color: #1E824C;
+}
+.monthly-day-total-negative {
+	color: rgb(192,57,43);
+}
+
+.monthly-week:nth-child(2n) .monthly-day {
+	background-color: #ecf0f1;
+}
+
+.page .panel, .page .panel .panel-heading {
+	/*border-radius: 0;*/
+}
+
+.page .panel .panel-body {
+	padding: 0px;
+	border: none;
+}
+
+.page .panel {
+	padding: 0px;
+	border: none;
+}
+
+#transaction-table {
+	width: 100%;
+}
+
+#transaction-table th {
+	border-bottom: 1px solid black;
+	color: white;
+}
+
+#transaction-table tr {
+	height: 30px;
+}
+
+#transaction-table tr td, #transaction-table tr th{
+	padding-left: 5px;
+}
+
+.transaction {
+	color: black;
+	font-weight: bold;
+}
+
+.transaction td:first-child {
+	padding-left: 5px;
+}
+
+.transaction-positive {
+	background-color: #2ecc71;
+}
+
+.transaction-negative {
+	background-color: #e74c3c;
+}
+
+#transactionTotal{
+	color: #2ecc71;
+	font-weight: bolder;
+}
+
+.toggler {
+	left: -20px;
+	top: 40%;
+	position: relative;
+	z-index: 99;
+}
+
+.toggler button {
+	height: 40px;
+	border: none;
+	background: #457fca; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #457fca , #5691c8); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #457fca , #5691c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color: white;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.toggler button:focus {
+	border: none;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.toggler button:hover {
+}
+
+#transactionSlidebar {
+	padding: 0;
+	padding-right: 20px;
+	background: #232526; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #232526 , #414345); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #232526 , #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

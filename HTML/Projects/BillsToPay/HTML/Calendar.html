@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wait, When Was That Due?</title>
+
+	<link rel="stylesheet" href="../Libraries/Styles/bootstrap.css">
+	<link rel="stylesheet" href="../Libraries/Styles/Calendar.css">
+
+	<link rel="stylesheet" href="../Libraries/Fonts/Font-Awesome-master/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../Libraries/Styles/slidebars.css">
+    <link rel="stylesheet" href="../Libraries/Styles/slidebarsHelper.css">
+
+    <!-- CUSTOM -->
+    <link rel="stylesheet" href="../Styles/CalendarHelper.css">
+</head>
+<body>
+
+<div canvas="container" style="background-color: transparent;">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Wait, When Was That Due?</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html"><span class="fa fa-home"></span> Home</a></li>
+                    <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DUNFGKA32BFGE"><span class="fa fa-paypal"></span> Donation</a></li>
+                    <li><a href="https://twitter.com/AndreaL0mbardo" target="_blank"><span class="fa fa-twitter"></span> Twitter</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> Luke Taylor <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">Settings</a></li>
+                            <li><a href="">Sign Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Toggle Side Menu -->
+    <div class="toggler"><button class="js-toggle-left-slidebar">Transactions <i class="fa fa-chevron-right" aria-hidden="true"></i></button></div>
+    
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="col-xs-12 col-lg-10 col-lg-offset-1 bootstrapCalendarContainer">
+		<div class="page">
+			<div class="calendarContainer">
+				<div class="monthly" id="mycalendar"></div>
+			</div>
+			<div style="display:none; width:250px;">
+				<input type="text" id="mytarget" value="Select Date">
+				<div class="monthly" id="mycalendar2"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <div off-canvas="slidebar-1 left push" id="transactionSlidebar">
+        <table id="transaction-table">
+            <tr>
+                <th width="25%" >Date</th>
+                <th width="50%">Bill</th>
+                <th width="25%">Amount</th>
+            </tr>
+            <tr class="transaction transaction-positive">
+                <td>1</td>
+                <td>Paycheck!</td>
+                <td>+ $1,500.00</td>
+            </tr>
+            <tr class="transaction transaction-negative">
+                <td>5</td>
+                <td>Internet</td>
+                <td>- $60.00</td>
+            </tr>
+            <tr class="transaction transaction-negative">
+                <td>8</td>
+                <td>Insurance</td>
+                <td>- $130.00</td>
+            </tr>
+            <tr class="transaction transaction-negative">
+                <td>10</td>
+                <td>Groceries</td>
+                <td>- $100.00</td>
+            </tr>
+            <tr class="transaction transaction-positive">
+                <td>14</td>
+                <td>Paycheck!</td>
+                <td>+ $1,500.00</td>
+            </tr>
+        </table>
+        <h3 id="transactionTotal" class="pull-right">+ $2,710.00</h3>
+    </div>
+
+
+
+    <script type="text/javascript" src="../Libraries/Scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../Libraries/Scripts/calendar.js"></script>
+    <script type="text/javascript" src="../Libraries/Scripts/slidebars.js"></script>
+    <script type="text/javascript" src="../Libraries/Scripts/slidebarsHelper.js"></script>
+
+    <!-- CUSTOM -->
+    <script type="text/javascript" src="../Scripts/CalendarHelper.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+#mainPanel {
+	padding: 0px; 
+	padding-right: 100px;
+	color: white;
+}
+
+#mainPanel .col-xs-12 .well {
+	color: black;
+}

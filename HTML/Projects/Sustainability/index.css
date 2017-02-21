@@ -1,0 +1,41 @@
+body {
+    background: url(Images/TreeBackground.jpg)no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+h1, h2, h3, h4, h5 {
+	color: white;
+	font-weight: bold;
+}
+
+.moduleContainer {
+	height: 625px;
+	background-color: transparent;
+	border-radius: 5px;
+}
+
+.chartContainer {
+	height: 625px;
+	background-color: transparent;
+	border-radius: 5px;
+}
+
+.row {
+	margin: 10px;
+}
+
+.module {
+	height: 25%;
+}
+
+.slider {
+	width: 100% !important;
+}
+
+.myChart {
+	border-radius: 5px;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Monograms</title>
+
+    <link href="Libraries/Styles/bootstrap.min.css" rel="stylesheet">
+    <link href="Libraries/Styles/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="Libraries/Styles/bootstrap-slider.min.css" rel="stylesheet" type="text/css">
+    <link href="index.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="col-xs-12 moduleContainer">
+                <div class="col-xs-12 module">
+                    <h3>Total Energy</h3>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default">Low</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default">Average</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default">High</button>
+                        </div>
+                    </div>
+                    <h5 class="pull-right">61,541,651 Joules</h5>
+                </div>
+                <div class="col-xs-12 module">
+                    <h3>Solar</h3>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default">Low</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default">Average</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default">High</button>
+                        </div>
+                    </div>
+                    <div class="slider slider-horizontal"></div>
+                    <h5 class="pull-right">61,541,651 Joules</h5>
+                </div>
+                <div class="col-xs-12 module">
+                    <h3>Diesel</h3>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default">Low</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default">Average</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default">High</button>
+                        </div>
+                    </div>
+                    <div class="slider slider-horizontal"></div>
+                    <h5 class="pull-right">61,541,651 Joules</h5>
+                </div>
+                <div class="col-xs-12 module">
+                    <h3>Wind</h3>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default">Low</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default">Average</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default">High</button>
+                        </div>
+                    </div>
+                    <div class="slider slider-horizontal"></div>
+                    <h5 class="pull-right">61,541,651 Joules</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+            <div class="col-xs-12 chartContainer">
+                <canvas id="myChart" height="0" width="100%"></canvas>
+                <div class="results"></div> 
+            </div>
+        </div>
+    </div>
+	<script src="Libraries/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Libraries/Scripts/bootstrap.min.js"></script>
+    <script src="Libraries/Scripts/bootstrap-slider.min.js"></script>
+    <script src="Libraries/Scripts/Chart.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
