@@ -20,6 +20,15 @@ $(document).ready(function() {
 	$('.monthly-day-event:nth-child(2n)').append('<div class="monthly-day-total monthly-day-total-positive">+$1,233.76</div>');
 	$('.monthly-day-event:nth-child(2n+1)').append('<div class="monthly-day-total monthly-day-total-negative">-$1,233.76</div>');
 
+	$('.transaction').each(function( index ) {
+		var num = $(this).attr('data-date');
+		$(this).click(function() {
+			$("[data-number=" + num +"]").click();
+		})
+	});
+
+	// $("[id=choose]")
+
 	// $('.toggler').hover(function(){
  //        $(this).stop().animate({left: '-20px'}, 500)
  //    }, function(){

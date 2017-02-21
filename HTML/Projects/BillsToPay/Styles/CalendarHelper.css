@@ -69,6 +69,12 @@ body {
 	font-weight: bold;
 }
 
+.transaction:hover {
+	-webkit-box-shadow: inset 0px 0px 50px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0px 0px 50px 0px rgba(0,0,0,0.2);
+	box-shadow: inset 0px 0px 50px 0px rgba(0,0,0,0.2);
+}
+
 .transaction td:first-child {
 	padding-left: 5px;
 }
@@ -81,15 +87,20 @@ body {
 	background-color: #e74c3c;
 }
 
-#transactionTotal{
+.transactionTotalPositive{
 	color: #2ecc71;
 	font-weight: bolder;
 }
 
+.transactionTotalNegative {
+	color: #e74c3c;
+	font-weight: bolder;
+}
+
 .toggler {
-	left: -20px;
-	top: 40%;
-	position: relative;
+	left: 0px;
+	top: 82px;
+	position: absolute;
 	z-index: 99;
 }
 
@@ -110,13 +121,34 @@ body {
 	border-bottom-right-radius: 0px;
 }
 
-.toggler button:hover {
+.sliderbarButton {
+	display: block;
 }
 
-#transactionSlidebar {
+.sliderbarButton:hover {
+	transform-origin: left center;
+	transform: scale(1.2);
+}
+
+#billsTab {
+	background: #f85032; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #f85032 , #e73827); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #f85032 , #e73827); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#incomeTab {
+	background: #76b852; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #76b852 , #8DC26F); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #76b852 , #8DC26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+
+.transactionSlidebar {
 	padding: 0;
 	padding-right: 20px;
 	background: #232526; /* fallback for old browsers */
 	background: -webkit-linear-gradient(to left, #232526 , #414345); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to left, #232526 , #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+

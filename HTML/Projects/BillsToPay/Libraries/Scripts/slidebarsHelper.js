@@ -201,4 +201,22 @@
             console.log( 'Toggle callback' );
         } );
     } );
+
+
+
+    // CUSTOM EVENTS
+    $( '.js-toggle-left-slidebar-1' ).on( 'click', function ( event ) {
+        event.stopPropagation();
+        controller.toggle( 'slidebar-1' );
+    } );
+    $( '.js-toggle-left-slidebar-2' ).on( 'click', function ( event ) {
+        event.stopPropagation();
+        controller.toggle( 'slidebar-2' );
+    } );
+    $( '.js-toggle-left-slidebar-3' ).on( 'click', function ( event ) {
+        event.stopPropagation();
+        controller.toggle( 'slidebar-3' );
+    } );
+
+
 } ) ( jQuery );

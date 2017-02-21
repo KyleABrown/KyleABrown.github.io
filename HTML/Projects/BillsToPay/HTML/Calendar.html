@@ -51,7 +51,11 @@
     </nav>
 
     <!-- Toggle Side Menu -->
-    <div class="toggler"><button class="js-toggle-left-slidebar">Transactions <i class="fa fa-chevron-right" aria-hidden="true"></i></button></div>
+    <div class="toggler">
+        <button id="transactionsTab" class="sliderbarButton js-toggle-left-slidebar-1">Transactions <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        <button id="billsTab" class="sliderbarButton js-toggle-left-slidebar-2">Bills <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        <button id="incomeTab" class="sliderbarButton js-toggle-left-slidebar-3">Income <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+    </div>
     
     <!-- Main component for a primary marketing message or call to action -->
     <div class="col-xs-12 col-lg-10 col-lg-offset-1 bootstrapCalendarContainer">
@@ -67,40 +71,112 @@
 	</div>
 </div>
 
-    <div off-canvas="slidebar-1 left push" id="transactionSlidebar">
+    <div off-canvas="slidebar-1 left push" class="transactionSlidebar">
+        <table id="transaction-table">
+            <tr>
+                <th width="25%" >Date</th>
+                <th width="50%">Transaction</th>
+                <th width="25%">Amount</th>
+            </tr>
+            <tr class="transaction transaction-positive" data-date="1">
+                <td>1</td>
+                <td>Paycheck!</td>
+                <td>+ $1,500.00</td>
+            </tr>
+            <tr class="transaction transaction-negative" data-date="5">
+                <td>5</td>
+                <td>Internet</td>
+                <td>- $60.00</td>
+            </tr>
+            <tr class="transaction transaction-negative" data-date="8">
+                <td>8</td>
+                <td>Insurance</td>
+                <td>- $130.00</td>
+            </tr>
+            <tr class="transaction transaction-negative" data-date="10">
+                <td>10</td>
+                <td>Groceries</td>
+                <td>- $100.00</td>
+            </tr>
+            <tr class="transaction transaction-positive" data-date="14">
+                <td>14</td>
+                <td>Paycheck!</td>
+                <td>+ $1,500.00</td>
+            </tr>
+        </table>
+        <h3 class="transactionTotalPositive pull-right">+ $2,710.00</h3>
+    </div>
+
+    <div off-canvas="slidebar-2 left push" class="transactionSlidebar">
         <table id="transaction-table">
             <tr>
                 <th width="25%" >Date</th>
                 <th width="50%">Bill</th>
                 <th width="25%">Amount</th>
             </tr>
-            <tr class="transaction transaction-positive">
+            <tr class="transaction transaction-negative" data-date="1">
                 <td>1</td>
-                <td>Paycheck!</td>
-                <td>+ $1,500.00</td>
+                <td>Sad Day Bill</td>
+                <td>- $1,500.00</td>
             </tr>
-            <tr class="transaction transaction-negative">
+            <tr class="transaction transaction-negative" data-date="5">
                 <td>5</td>
                 <td>Internet</td>
                 <td>- $60.00</td>
             </tr>
-            <tr class="transaction transaction-negative">
+            <tr class="transaction transaction-negative" data-date="8">
                 <td>8</td>
                 <td>Insurance</td>
                 <td>- $130.00</td>
             </tr>
-            <tr class="transaction transaction-negative">
+            <tr class="transaction transaction-negative" data-date="10">
                 <td>10</td>
                 <td>Groceries</td>
                 <td>- $100.00</td>
             </tr>
-            <tr class="transaction transaction-positive">
+            <tr class="transaction transaction-negative" data-date="14">
+                <td>14</td>
+                <td>Sad Day Bill</td>
+                <td>- $1,500.00</td>
+            </tr>
+        </table>
+        <h3 class="transactionTotalNegative pull-right">- $2,710.00</h3>
+    </div>
+
+    <div off-canvas="slidebar-3 left push" class="transactionSlidebar">
+        <table id="transaction-table">
+            <tr>
+                <th width="25%" >Date</th>
+                <th width="50%">Income</th>
+                <th width="25%">Amount</th>
+            </tr>
+            <tr class="transaction transaction-positive" data-date="1">
+                <td>1</td>
+                <td>Paycheck!</td>
+                <td>+ $1,500.00</td>
+            </tr>
+            <tr class="transaction transaction-positive" data-date="5">
+                <td>5</td>
+                <td>Internet</td>
+                <td>+ $60.00</td>
+            </tr>
+            <tr class="transaction transaction-positive" data-date="8">
+                <td>8</td>
+                <td>Insurance</td>
+                <td>+ $130.00</td>
+            </tr>
+            <tr class="transaction transaction-positive" data-date="10">
+                <td>10</td>
+                <td>Groceries</td>
+                <td>+ $100.00</td>
+            </tr>
+            <tr class="transaction transaction-positive" data-date="14">
                 <td>14</td>
                 <td>Paycheck!</td>
                 <td>+ $1,500.00</td>
             </tr>
         </table>
-        <h3 id="transactionTotal" class="pull-right">+ $2,710.00</h3>
+        <h3 class="transactionTotalPositive pull-right">+ $2,710.00</h3>
     </div>
 
 
