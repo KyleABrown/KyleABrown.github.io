@@ -47,20 +47,20 @@ body {
 	border: none;
 }
 
-#transaction-table {
+.transaction-table {
 	width: 100%;
 }
 
-#transaction-table th {
+.transaction-table th {
 	border-bottom: 1px solid black;
 	color: white;
 }
 
-#transaction-table tr {
+.transaction-table tr {
 	height: 30px;
 }
 
-#transaction-table tr td, #transaction-table tr th{
+.transaction-table tr td, .transaction-table tr th{
 	padding-left: 5px;
 }
 
@@ -81,10 +81,12 @@ body {
 
 .transaction-positive {
 	background-color: #2ecc71;
+	border-bottom: 1px solid #141414;
 }
 
 .transaction-negative {
 	background-color: #e74c3c;
+	border-bottom: 1px solid #141414;
 }
 
 .transactionTotalPositive{
@@ -123,6 +125,15 @@ body {
 
 .sliderbarButton {
 	display: block;
+	width: 100%;
+}
+
+.sliderbarButton:focus {
+	outline: none;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 5px !important;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 5px !important;
 }
 
 .sliderbarButton:hover {
@@ -152,3 +163,82 @@ body {
 	background: linear-gradient(to left, #232526 , #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.transactionAddButton {
+	display: block;
+	position: absolute;
+	background-color: #141414;
+	border-radius: 5px;
+	width: 90%;
+	height: 50px;
+	bottom: 0;
+	text-align: center;
+	margin: 5%;
+	padding-top: 15px;
+	font-weight: bold;
+}
+#incomeAddButton:hover {
+	color: #2ecc71;
+	background-color: white;
+	border: 1px solid #2ecc71;
+}
+
+#billAddButton:hover {
+	color: #e74c3c;
+	background-color: white;
+	border: 1px solid #e74c3c;
+}
+
+#transactionAddButton:hover {
+	color: #141414;
+	background-color: white;
+	border: 1px solid #141414;
+}
+
+.transactionMonth{
+	padding-left: 10px;
+}
+
+/*TRANSACTION ADD*/
+#addTransactionModal .modal-dialog .modal-content{
+	border: border: 1px solid #141414;
+}
+#addTransactionModalHeader {
+	background: #457fca; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #457fca , #5691c8); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #457fca , #5691c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	border-radius: 4px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	color: white;
+}
+
+/*BILL ADD*/
+#addBillModal .modal-dialog .modal-content{
+	border: 1px solid #e74c3c;
+}
+#addBillModalHeader {
+	background: #f85032; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #f85032 , #e73827); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #f85032 , #e73827); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	border-radius: 4px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	color: #141414;
+}
+
+/*INCOME ADD*/
+#addIncomeModal .modal-dialog .modal-content{
+	border: 1px solid #2ecc71;
+}
+#addIncomeModalHeader {
+	background: #76b852; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #76b852 , #8DC26F); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #76b852 , #8DC26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	border-radius: 4px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	color: #141414;
+}
+.modal-header h4 {
+	font-weight: bold;
+}

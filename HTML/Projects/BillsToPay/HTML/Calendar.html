@@ -8,10 +8,10 @@
 
 	<link rel="stylesheet" href="../Libraries/Styles/bootstrap.css">
 	<link rel="stylesheet" href="../Libraries/Styles/Calendar.css">
-
 	<link rel="stylesheet" href="../Libraries/Styles/font-awesome.css" type="text/css">
     <link rel="stylesheet" href="../Libraries/Styles/slidebars.css">
     <link rel="stylesheet" href="../Libraries/Styles/slidebarsHelper.css">
+    <link rel="stylesheet" href="../Libraries/Styles/bootstrap-datetimepicker.min.css">
 
     <!-- CUSTOM -->
     <link rel="stylesheet" href="../Styles/CalendarHelper.css">
@@ -71,8 +71,154 @@
 	</div>
 </div>
 
+    <div id="addTransactionModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header" id="addTransactionModalHeader">
+            <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
+            <h4 class="modal-title">Add Transaction</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+                <div class="input-group">
+                    <span class="input-group-addon">Type</span>
+                    <select class="form-control" id="addTransactionType" autofocus>
+                        <option value="" disabled selected>Select One</option>
+                        <option>Bill</option>
+                        <option>Income</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Name</span>
+                    <input id="addTransactionName" type="text" class="form-control" name="addTransactionName" placeholder="Transaction Name" required>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Amount</span>
+                    <input id="addTransactionAmount" type="currency" class="form-control" name="addTransactionAmount" placeholder="Amount ($)" required>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Start Date</span>
+                    <input id="addTransactionStartDate" size="16" type="text" placeholder="Click to Choose" readonly class="form-control form_datetime" required>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon" required>Frequency</span>
+                    <select class="form-control" id="addTransactionFrequency" autofocus>
+                        <option value="" disabled selected>Select One</option>
+                        <option>Daily</option>
+                        <option>Weekly</option>
+                        <option>Every 2 Weeks</option>
+                        <option>Monthly</option>
+                        <option>Yearly</option>
+                    </select>
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success" id="addTransactionModalSave">Save</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="addBillModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header" id="addBillModalHeader" >
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Add Bill</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+                <div class="input-group">
+                    <span class="input-group-addon">Name</span>
+                    <input id="addBillName" type="text" class="form-control" name="addBillName" placeholder="Bill Name" autofocus required>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Amount</span>
+                    <input id="addBillAmount" type="currency" class="form-control" name="addBillAmount" placeholder="Amount ($)" required>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Start Date</span>
+                    <input id="addBillStartDate" size="16" type="text" placeholder="Click to Choose" readonly class="form-control form_datetime" required>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Frequency</span>
+                    <select class="form-control" id="addBillFrequency" autofocus>
+                        <option value="" disabled selected>Select One</option>
+                        <option>Daily</option>
+                        <option>Weekly</option>
+                        <option>Every 2 Weeks</option>
+                        <option>Monthly</option>
+                        <option>Yearly</option>
+                    </select>
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success" id="addBillModalSave">Save</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="addIncomeModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header" id="addIncomeModalHeader">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Add Income</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+                <div class="input-group">
+                    <span class="input-group-addon">Name</span>
+                    <input id="addIncomeName" type="text" class="form-control" name="addIncomeName" placeholder="Income Name" autofocus required>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Amount</span>
+                    <input id="addIncomeAmount" type="currency" class="form-control" name="addIncomeAmount" placeholder="Amount ($)" required>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Start Date</span>
+                    <input id="addIncomeStartDate" size="16" type="text" placeholder="Click to Choose" readonly class="form-control form_datetime" required>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Frequency</span>
+                    <select class="form-control" id="addIncomeFrequency" autofocus>
+                        <option value="" disabled selected>Select One</option>
+                        <option>Daily</option>
+                        <option>Weekly</option>
+                        <option>Every 2 Weeks</option>
+                        <option>Monthly</option>
+                        <option>Yearly</option>
+                    </select>
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success" id="addIncomeModalSave">Save</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
     <div off-canvas="slidebar-1 left push" class="transactionSlidebar">
-        <table id="transaction-table">
+
+        <h1 class="transactionMonth">February</h1>
+
+        <table class="transaction-table" id="transactionTable">
             <tr>
                 <th width="25%" >Date</th>
                 <th width="50%">Transaction</th>
@@ -105,10 +251,15 @@
             </tr>
         </table>
         <h3 class="transactionTotalPositive pull-right">+ $2,710.00</h3>
+
+        <div class="transactionAddButton" id="transactionAddButton" data-toggle="modal" data-target="#addTransactionModal">Add Transaction</div>
     </div>
 
     <div off-canvas="slidebar-2 left push" class="transactionSlidebar">
-        <table id="transaction-table">
+
+        <h1 class="transactionMonth">February</h1>
+
+        <table class="transaction-table" id="billTable">
             <tr>
                 <th width="25%" >Date</th>
                 <th width="50%">Bill</th>
@@ -141,10 +292,15 @@
             </tr>
         </table>
         <h3 class="transactionTotalNegative pull-right">- $2,710.00</h3>
+
+        <div class="transactionAddButton" id="billAddButton" data-toggle="modal" data-target="#addBillModal">Add Bill</div>
     </div>
 
     <div off-canvas="slidebar-3 left push" class="transactionSlidebar">
-        <table id="transaction-table">
+
+        <h1 class="transactionMonth">February</h1>
+
+        <table class="transaction-table" id="incomeTable">
             <tr>
                 <th width="25%" >Date</th>
                 <th width="50%">Income</th>
@@ -177,14 +333,17 @@
             </tr>
         </table>
         <h3 class="transactionTotalPositive pull-right">+ $2,710.00</h3>
+
+        <div class="transactionAddButton" id="incomeAddButton" data-toggle="modal" data-target="#addIncomeModal">Add Income</div>
+
     </div>
 
-
-
     <script type="text/javascript" src="../Libraries/Scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../Libraries/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="../Libraries/Scripts/calendar.js"></script>
     <script type="text/javascript" src="../Libraries/Scripts/slidebars.js"></script>
     <script type="text/javascript" src="../Libraries/Scripts/slidebarsHelper.js"></script>
+    <script type="text/javascript" src="../Libraries/Scripts/bootstrap-datetimepicker.min.js"></script>
 
     <!-- CUSTOM -->
     <script type="text/javascript" src="../Scripts/CalendarHelper.js"></script>

@@ -1,25 +1,26 @@
 $(document).ready(function() {   
 
-	$('#mycalendar').monthly({
-		mode: 'event',
-		//jsonUrl: 'events.json',
-		//dataType: 'json'
-		xmlUrl: '../Data/events.xml'
-	});
+	function initilizePackages() {
+		/* Initilize Calendar */
+		$('#mycalendar').monthly({
+			mode: 'event',
+			//jsonUrl: 'events.json',
+			//dataType: 'json'
+			xmlUrl: '../Data/events.xml'
+		});
 
-	$('#mycalendar2').monthly({
-		mode: 'picker',
-		target: '#mytarget',
-		setWidth: '250px',
-		startHidden: true,
-		showTrigger: '#mytarget',
-		stylePast: true,
-		disablePast: true
-	});
+		/* Initilize DateTime Picker */
+		$(".form_datetime").datetimepicker({
+			format: 'yyyy-mm-dd',
+			autoclose: true,
+			minView: 2,
+			todayHighlight: true,
+		});
+	}
 
-	$('.monthly-day-event:nth-child(2n)').append('<div class="monthly-day-total monthly-day-total-positive">+$1,233.76</div>');
-	$('.monthly-day-event:nth-child(2n+1)').append('<div class="monthly-day-total monthly-day-total-negative">-$1,233.76</div>');
+	initilizePackages();
 
+	/* Stuff I have to do with Bill Data */
 	$('.transaction').each(function( index ) {
 		var num = $(this).attr('data-date');
 		$(this).click(function() {
@@ -27,19 +28,53 @@ $(document).ready(function() {
 		})
 	});
 
-	// $("[id=choose]")
+	$('.monthly-day-event:nth-child(2n)').append('<div class="monthly-day-total monthly-day-total-positive">+$1,233.76</div>');
+	$('.monthly-day-event:nth-child(2n+1)').append('<div class="monthly-day-total monthly-day-total-negative">-$1,233.76</div>');
 
-	// $('.toggler').hover(function(){
- //        $(this).stop().animate({left: '-20px'}, 500)
- //    }, function(){
- //        $(this).stop().animate({left: '-110px'}, 500)
- //  	});
+	/*************************************/
 
-	// $("#transaction-table tr").click(function() {
-	// 	var row=$(this)//add some .parent() untill you get the TR element
-	// 	var val=$(this).val(); //<select> value if you want to use it for some conditions
-	// 	$('<table style="width: 100%; padding: 0; margin: 0;"><tr class="rowOptions"><td width="50%"><i class="fa fa-pencil" aria-hidden="true"></i></td><td width="50%"><i class="fa fa-times" aria-hidden="true"></i></td></tr></table>').insertAfter(row);
-	// })
+	$('#addTransactionModalSave').click(function () {
+		var name = $('#addTransactionName').val();
+		var amount = $('#addTransactionAmount').val();
+		var startDate = $('#addTransactionStartDate').val();
+		startDate = startDate.split('-')[2];
+		var frequency = $('#addTransactionFrequency').val();
+
+		var type = "";
+		var typeSign = "";
+
+		if ($('#addTransactionType').val() == "Bill") {			
+			type = "transaction-negative";
+			typeSign = "-";
+		}
+		else {
+			type = "transaction-positive";
+			typeSign = "+";
+		}
+
+		$('#transactionTable').append('<tr class="transaction '+ type +'" data-date='+ startDate + '><td>'+ startDate +'</td><td>'+ name +'</td><td>' + typeSign +' $'+ amount +'</td></tr>');
+		$('#addTransactionModal').modal('hide');
+	});
+
+	$('#addBillModalSave').click(function () {
+		var name = $('#addBillName').val();
+		var amount = $('#addBillAmount').val();
+		var startDate = $('#addBillStartDate').val();
+		startDate = startDate.split('-')[2];
+		var frequency = $('#addBillFrequency').val();
+		$('#billTable').append('<tr class="transaction transaction-negative" data-date='+ startDate + '><td>'+ startDate +'</td><td>'+ name +'</td><td>- $'+ amount +'</td></tr>');
+		$('#addBillModal').modal('hide');
+	});
+
+	$('#addIncomeModalSave').click(function () {
+		var name = $('#addIncomeName').val();
+		var amount = $('#addIncomeAmount').val();
+		var startDate = $('#addIncomeStartDate').val();
+		startDate = startDate.split('-')[2];
+		var frequency = $('#addIncomeFrequency').val();
+		$('#incomeTable').append('<tr class="transaction transaction-positive" data-date='+ startDate + '><td>'+ startDate +'</td><td>'+ name +'</td><td>+ $'+ amount +'</td></tr>');
+		$('#addIncomeModal').modal('hide');
+	});
 
 	switch(window.location.protocol) {
 		case 'http:':

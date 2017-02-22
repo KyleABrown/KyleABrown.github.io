@@ -16,7 +16,6 @@
     } );
 
     $( controller.events ).on( 'opening', function ( event, id ) {
-        $('.js-toggle-left-slidebar').html('Transactions <i class="fa fa-chevron-left" aria-hidden="true"></i>');
         console.log( 'Opening event of slidebar with id ' + id );
     } );
 
@@ -25,7 +24,6 @@
     } );
 
     $( controller.events ).on( 'closing', function ( event, id ) {
-        $('.js-toggle-left-slidebar').html('Transactions <i class="fa fa-chevron-right" aria-hidden="true"></i>');
         console.log( 'Closing event of slidebar with id ' + id );
     } );
 
@@ -206,14 +204,32 @@
 
     // CUSTOM EVENTS
     $( '.js-toggle-left-slidebar-1' ).on( 'click', function ( event ) {
+
+        if ($('.js-toggle-left-slidebar-1').html() == 'Transactions <i class="fa fa-chevron-left" aria-hidden="true"></i>')
+            $('.js-toggle-left-slidebar-1').html('Transactions <i class="fa fa-chevron-right" aria-hidden="true"></i>');
+        else 
+            $('.js-toggle-left-slidebar-1').html('Transactions <i class="fa fa-chevron-left" aria-hidden="true"></i>');
+
         event.stopPropagation();
         controller.toggle( 'slidebar-1' );
     } );
     $( '.js-toggle-left-slidebar-2' ).on( 'click', function ( event ) {
+
+        if ($('.js-toggle-left-slidebar-2').html() == 'Bills <i class="fa fa-chevron-left" aria-hidden="true"></i>')
+            $('.js-toggle-left-slidebar-2').html('Bills <i class="fa fa-chevron-right" aria-hidden="true"></i>');
+        else 
+            $('.js-toggle-left-slidebar-2').html('Bills <i class="fa fa-chevron-left" aria-hidden="true"></i>');
+
         event.stopPropagation();
         controller.toggle( 'slidebar-2' );
     } );
     $( '.js-toggle-left-slidebar-3' ).on( 'click', function ( event ) {
+
+        if ($('.js-toggle-left-slidebar-3').html() == 'Income <i class="fa fa-chevron-left" aria-hidden="true"></i>')
+            $('.js-toggle-left-slidebar-3').html('Income <i class="fa fa-chevron-right" aria-hidden="true"></i>');
+        else 
+            $('.js-toggle-left-slidebar-3').html('Income <i class="fa fa-chevron-left" aria-hidden="true"></i>');
+
         event.stopPropagation();
         controller.toggle( 'slidebar-3' );
     } );
