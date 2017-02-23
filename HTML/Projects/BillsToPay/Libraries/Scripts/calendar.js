@@ -122,7 +122,7 @@ Monthly 2.2.0 by Kevin Thornbloom is licensed under a Creative Commons Attributi
             + attr("class", "monthly-list-item")
             + attr("id", uniqueId + "day" + dayNumber)
             + attr("data-number", dayNumber)
-            + '><div class="monthly-event-list-date">' + dayNames[dayOfWeek] + "<br>" + dayNumber + "</div></div>");
+            + '><div class="monthly-event-list-date" style="font-weight: bold;">' + dayNames[dayOfWeek] + " " + dayNumber + "</div></div>");
         } else {
           $(parent + " .monthly-day-wrap").append("<a"
             + attr("href", "#")

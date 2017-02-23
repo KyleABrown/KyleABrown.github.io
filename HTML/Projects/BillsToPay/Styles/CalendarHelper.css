@@ -134,6 +134,8 @@ body {
 	border-top-right-radius: 5px !important;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 5px !important;
+	transform-origin: left center;
+	transform: scale(1.2);
 }
 
 .sliderbarButton:hover {
@@ -153,8 +155,6 @@ body {
 	background: linear-gradient(to left, #76b852 , #8DC26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
-
 .transactionSlidebar {
 	padding: 0;
 	padding-right: 20px;
@@ -165,7 +165,7 @@ body {
 
 .transactionAddButton {
 	display: block;
-	position: absolute;
+	position: relative;
 	background-color: #141414;
 	border-radius: 5px;
 	width: 90%;
@@ -173,6 +173,7 @@ body {
 	bottom: 0;
 	text-align: center;
 	margin: 5%;
+	margin-top: 20%;
 	padding-top: 15px;
 	font-weight: bold;
 }

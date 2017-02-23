@@ -309,6 +309,7 @@
 	background: rgba(233, 235, 236, 0.9);
 	overflow: auto;
 	position: absolute;
+	z-index: 100;
 	top: 2.5em;
 	width: 100%;
 	height: calc(100% - 2.5em);

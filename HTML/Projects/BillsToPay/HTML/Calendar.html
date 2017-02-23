@@ -52,9 +52,9 @@
 
     <!-- Toggle Side Menu -->
     <div class="toggler">
-        <button id="transactionsTab" class="sliderbarButton js-toggle-left-slidebar-1">Transactions <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-        <button id="billsTab" class="sliderbarButton js-toggle-left-slidebar-2">Bills <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-        <button id="incomeTab" class="sliderbarButton js-toggle-left-slidebar-3">Income <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        <button id="transactionsTab" class="sliderbarButton js-toggle-left-slidebar-1">Transactions</button>
+        <button id="billsTab" class="sliderbarButton js-toggle-left-slidebar-2">Bills</button>
+        <button id="incomeTab" class="sliderbarButton js-toggle-left-slidebar-3">Income</button>
     </div>
     
     <!-- Main component for a primary marketing message or call to action -->
@@ -71,7 +71,7 @@
 	</div>
 </div>
 
-    <div id="addTransactionModal" class="modal fade" role="dialog">
+    <div id="addTransactionModal" class="modal fade addModal" role="dialog">
       <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -84,7 +84,7 @@
             <form>
                 <div class="input-group">
                     <span class="input-group-addon">Type</span>
-                    <select class="form-control" id="addTransactionType" autofocus>
+                    <select class="form-control" id="addTransactionType" autofocus onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});">
                         <option value="" disabled selected>Select One</option>
                         <option>Bill</option>
                         <option>Income</option>
@@ -92,19 +92,19 @@
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">Name</span>
-                    <input id="addTransactionName" type="text" class="form-control" name="addTransactionName" placeholder="Transaction Name" required>
+                    <input id="addTransactionName" type="text" class="form-control" name="addTransactionName" placeholder="Transaction Name" required onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});">
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">Amount</span>
-                    <input id="addTransactionAmount" type="currency" class="form-control" name="addTransactionAmount" placeholder="Amount ($)" required>
+                    <input id="addTransactionAmount" type="currency" class="form-control" name="addTransactionAmount" placeholder="Amount ($)" required onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});">
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">Start Date</span>
-                    <input id="addTransactionStartDate" size="16" type="text" placeholder="Click to Choose" readonly class="form-control form_datetime" required>
+                    <input id="addTransactionStartDate" size="16" type="text" placeholder="Click to Choose" readonly class="form-control form_datetime" required onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});">
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon" required>Frequency</span>
-                    <select class="form-control" id="addTransactionFrequency" autofocus>
+                    <select class="form-control" id="addTransactionFrequency" onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});">
                         <option value="" disabled selected>Select One</option>
                         <option>Daily</option>
                         <option>Weekly</option>
@@ -116,15 +116,14 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-success" id="addTransactionModalSave">Save</button>
+            <button type="button" class="btn btn-success" id="addTransactionModalSave">Save</button>
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
           </div>
         </div>
-
       </div>
     </div>
 
-    <div id="addBillModal" class="modal fade" role="dialog">
+    <div id="addBillModal" class="modal fade addModal" role="dialog">
       <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -137,19 +136,19 @@
             <form>
                 <div class="input-group">
                     <span class="input-group-addon">Name</span>
-                    <input id="addBillName" type="text" class="form-control" name="addBillName" placeholder="Bill Name" autofocus required>
+                    <input id="addBillName" type="text" class="form-control" name="addBillName" placeholder="Bill Name" autofocus required onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});">
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">Amount</span>
-                    <input id="addBillAmount" type="currency" class="form-control" name="addBillAmount" placeholder="Amount ($)" required>
+                    <input id="addBillAmount" type="currency" class="form-control" name="addBillAmount" placeholder="Amount ($)" required onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});">
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">Start Date</span>
-                    <input id="addBillStartDate" size="16" type="text" placeholder="Click to Choose" readonly class="form-control form_datetime" required>
+                    <input id="addBillStartDate" size="16" type="text" placeholder="Click to Choose" readonly class="form-control form_datetime" required onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});">
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">Frequency</span>
-                    <select class="form-control" id="addBillFrequency" autofocus>
+                    <select class="form-control" id="addBillFrequency" onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});">
                         <option value="" disabled selected>Select One</option>
                         <option>Daily</option>
                         <option>Weekly</option>
@@ -161,15 +160,14 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-success" id="addBillModalSave">Save</button>
+            <button type="button" class="btn btn-success" id="addBillModalSave">Save</button>
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
           </div>
         </div>
-
       </div>
     </div>
 
-    <div id="addIncomeModal" class="modal fade" role="dialog">
+    <div id="addIncomeModal" class="modal fade addModal" role="dialog">
       <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -182,19 +180,19 @@
             <form>
                 <div class="input-group">
                     <span class="input-group-addon">Name</span>
-                    <input id="addIncomeName" type="text" class="form-control" name="addIncomeName" placeholder="Income Name" autofocus required>
+                    <input id="addIncomeName" type="text" class="form-control" name="addIncomeName" placeholder="Income Name" autofocus required onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});">
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">Amount</span>
-                    <input id="addIncomeAmount" type="currency" class="form-control" name="addIncomeAmount" placeholder="Amount ($)" required>
+                    <input id="addIncomeAmount" type="currency" class="form-control" name="addIncomeAmount" placeholder="Amount ($)" required onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});">
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">Start Date</span>
-                    <input id="addIncomeStartDate" size="16" type="text" placeholder="Click to Choose" readonly class="form-control form_datetime" required>
+                    <input id="addIncomeStartDate" size="16" type="text" placeholder="Click to Choose" readonly class="form-control form_datetime" required onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});"> 
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">Frequency</span>
-                    <select class="form-control" id="addIncomeFrequency" autofocus>
+                    <select class="form-control" id="addIncomeFrequency" onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});">
                         <option value="" disabled selected>Select One</option>
                         <option>Daily</option>
                         <option>Weekly</option>
@@ -206,11 +204,37 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-success" id="addIncomeModalSave">Save</button>
+            <button type="button" class="btn btn-success" id="addIncomeModalSave">Save</button>
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
           </div>
         </div>
+      </div>
+    </div>
 
+    <div id="currentBalanceModal" class="modal fade addModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header" id="currentBalanceModalHeader">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">What is your Current Balance?</h4>
+          </div>
+          <div class="modal-body">
+            <p>Updating your current balance allows [insert program name here] to keep accurate and up to date data. We all make many small and seeming irrelevant purchases. However, these purchases add up over time and can cause a noticeable difference in your balance.
+            <br><br>Your current listed balance is: <strong>$1,352.25</strong> </p>
+            <form>
+                <div class="input-group">
+                    <span class="input-group-addon">Amount</span>
+                    <input id="currentBalanceAmount" type="currency" class="form-control" name="currentBalanceAmount" placeholder="Amount ($)" required onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});">
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" id="currentBalanceModalSave">Save</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -225,17 +249,17 @@
                 <th width="25%">Amount</th>
             </tr>
             <tr class="transaction transaction-positive" data-date="1">
-                <td>1</td>
+                <td>01</td>
                 <td>Paycheck!</td>
                 <td>+ $1,500.00</td>
             </tr>
             <tr class="transaction transaction-negative" data-date="5">
-                <td>5</td>
+                <td>05</td>
                 <td>Internet</td>
                 <td>- $60.00</td>
             </tr>
             <tr class="transaction transaction-negative" data-date="8">
-                <td>8</td>
+                <td>08</td>
                 <td>Insurance</td>
                 <td>- $130.00</td>
             </tr>
@@ -266,17 +290,17 @@
                 <th width="25%">Amount</th>
             </tr>
             <tr class="transaction transaction-negative" data-date="1">
-                <td>1</td>
+                <td>01</td>
                 <td>Sad Day Bill</td>
                 <td>- $1,500.00</td>
             </tr>
             <tr class="transaction transaction-negative" data-date="5">
-                <td>5</td>
+                <td>05</td>
                 <td>Internet</td>
                 <td>- $60.00</td>
             </tr>
             <tr class="transaction transaction-negative" data-date="8">
-                <td>8</td>
+                <td>08</td>
                 <td>Insurance</td>
                 <td>- $130.00</td>
             </tr>
@@ -307,17 +331,17 @@
                 <th width="25%">Amount</th>
             </tr>
             <tr class="transaction transaction-positive" data-date="1">
-                <td>1</td>
+                <td>01</td>
                 <td>Paycheck!</td>
                 <td>+ $1,500.00</td>
             </tr>
             <tr class="transaction transaction-positive" data-date="5">
-                <td>5</td>
+                <td>05</td>
                 <td>Internet</td>
                 <td>+ $60.00</td>
             </tr>
             <tr class="transaction transaction-positive" data-date="8">
-                <td>8</td>
+                <td>08</td>
                 <td>Insurance</td>
                 <td>+ $130.00</td>
             </tr>
@@ -344,6 +368,7 @@
     <script type="text/javascript" src="../Libraries/Scripts/slidebars.js"></script>
     <script type="text/javascript" src="../Libraries/Scripts/slidebarsHelper.js"></script>
     <script type="text/javascript" src="../Libraries/Scripts/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="../Libraries/Scripts/maskMoney.min.js"></script>
 
     <!-- CUSTOM -->
     <script type="text/javascript" src="../Scripts/CalendarHelper.js"></script>
