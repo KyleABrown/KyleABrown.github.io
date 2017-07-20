@@ -238,6 +238,51 @@
       </div>
     </div>
 
+    <div id="editTransactionModal" class="modal fade addModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header" id="editTransactionModal">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Transaction Details</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+                <div class="input-group">
+                    <span class="input-group-addon">Name</span>
+                    <input id="editTransactionName" type="text" class="form-control" name="editTransactionName" placeholder="Transaction Name" autofocus required onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Amount</span>
+                    <input id="editTransactionAmount" type="currency" class="form-control" name="addIncomeAmount" placeholder="Amount ($)" required onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Start Date</span>
+                    <input id="editTransactionStartDate" size="16" type="text" placeholder="Click to Choose" readonly class="form-control form_datetime" required onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});"> 
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Frequency</span>
+                    <select class="form-control" id="editTransactionFrequency" onclick="$(this).css({'-webkit-box-shadow': 'none','-moz-box-shadow': 'none','box-shadow': 'none'});">
+                        <option value="" disabled selected>Select One</option>
+                        <option>Daily</option>
+                        <option>Weekly</option>
+                        <option>Every 2 Weeks</option>
+                        <option>Monthly</option>
+                        <option>Yearly</option>
+                    </select>
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger pull-left" id="editTransactionModalDelete">Delete</button>
+            <button type="button" class="btn btn-success" id="editTransactionModalSave">Save</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div off-canvas="slidebar-1 left push" class="transactionSlidebar">
 
         <h1 class="transactionMonth">February</h1>

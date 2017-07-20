@@ -22,6 +22,7 @@ $(document).ready(function() {
 		$("#addBillAmount").maskMoney({allowZero:true, prefix: '$'});
 		$("#addIncomeAmount").maskMoney({allowZero:true, prefix: '$'});
 		$("#currentBalanceAmount").maskMoney({allowZero:true, allowNegative:true, prefix: '$'});
+		$("#editTransactionAmount").maskMoney({allowZero:true, prefix: '$'});
 
 		/* Add close button to event list div */
 		$(document).mouseup(function (e) {
@@ -136,9 +137,32 @@ $(document).ready(function() {
 
 	/**************************************  Stuff I have to do with Bill Data *********************************************/
 	$('.transaction').each(function( index ) {
-		var num = $(this).attr('data-date');
 		$(this).click(function() {
-			$("[data-number=" + num +"]").click();
+
+			var date = "";
+			var name = "";
+			var amount = "";
+
+			$(this).children().each(function( index  ) {
+				console.log($(this).text());
+				if (index == 0) {
+					date = $(this).text();
+				}
+				else if (index == 1) {
+					name = $(this).text();
+				}
+				else if (index == 2) {
+					amount = $(this).text();
+				}
+
+			});
+
+			$('#editTransactionName').val(name);
+			$('#editTransactionAmount').val(amount);
+			$('#editTransactionStartDate').val('');
+			$('#editTransactionFrequency').val('');
+
+			$('#editTransactionModal').modal('show');
 		})
 	});
 
